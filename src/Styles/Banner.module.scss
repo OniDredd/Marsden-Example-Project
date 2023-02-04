@@ -1,0 +1,130 @@
+@use 'base' as b;
+@use 'media' as m;
+
+.banner_section {
+    position: relative;
+    display: flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90vh;
+    background-image: url('../Assets/backgroundhomepage.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    .banner_container {
+        width: 60%;
+        margin: 0 0 20vh 7vw;
+
+        .banner_title {
+            font-size: 5em;
+            font-weight: 900;
+            word-wrap: break-word;
+        }
+    
+        .banner_subtitle {
+            font-size: large;
+            text-transform: uppercase;
+            letter-spacing: 30px;
+        }
+    }
+
+    .form_container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        position: absolute;
+        color: b.$blackmain;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 15vh;
+        margin: 0 auto;
+        
+        input[type="search"]{
+            background-color: b.$whitemain;
+            border: solid 1px b.$redmain;
+            width: 30vw;
+            padding: 2vh 1vw;
+            color: b.$blackmain;
+        }
+
+        input[type="button"]{
+            color: b.$redmain;
+            background-color: b.$blackmain;
+            border: solid 1px b.$redmain;
+            padding: 2vh 1vw;
+            &:hover {
+                color: b.$greymain;
+                background-color: b.$redmain;
+            }
+        }
+    }
+}
+
+@include m.Phone{
+    .banner_section {
+        position: relative;
+        display: flex;
+        flex-direction:row;
+        justify-content: flex-start;
+        align-items: center;
+        height: 90vh;
+        background-image: url('../Assets/backgroundhomepage.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        
+        .banner_container {
+            width: 100%;
+            margin: 0 0 20vh 7vw;
+    
+            .banner_title {
+                font-size: 3em;
+                font-weight: 900;
+                word-wrap: break-word;
+            }
+        
+            .banner_subtitle {
+                font-size: 2rem;
+                text-transform: uppercase;
+                letter-spacing: 30px;
+            }
+        }
+    
+        .form_container {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            color: b.$blackmain;
+            top: auto;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 15vh;
+            margin: 0 auto;
+            
+            input[type="search"]{
+                background-color: b.$whitemain;
+                border: solid 1px b.$redmain;
+                width: 80vw;
+                padding: 2vh 1vw;
+                color: b.$blackmain;
+            }
+    
+            input[type="button"]{
+                color: b.$redmain;
+                width: 80vw;
+                background-color: b.$blackmain;
+                border: solid 1px b.$redmain;
+                padding: 2vh 1vw;
+                &:hover {
+                    color: b.$greymain;
+                    background-color: b.$redmain;
+                }
+            }
+        }
+    }
+    
+}

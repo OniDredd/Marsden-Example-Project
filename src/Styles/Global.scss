@@ -1,0 +1,39 @@
+@use 'base' as b;
+
+body {
+    font-family: b.$subfont;
+    background-color: b.$blackmain;
+
+    h1 {
+        color: b.$redmain;
+        font-family: b.$mainfont;
+        font-size: xx-large;
+        text-transform: uppercase;
+    }
+
+    h2 {
+        color: b.$greymain;
+    }
+    
+    a {
+        font-size:medium;
+        text-decoration: none;
+        color: b.$redmain;
+        &:hover {
+            color: b.$greymain;
+        }
+    }
+    
+    button {
+        color: b.$redmain;
+        background-color: transparent;
+        border: 1px b.$redmain solid;
+        padding: 10px 20px;
+        margin: 0 10px;
+        font-size: medium;
+        &:hover {
+            color: b.$greymain;
+            background-color: b.$redmain;
+        }
+    }
+}

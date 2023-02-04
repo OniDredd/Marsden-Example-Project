@@ -1,0 +1,40 @@
+@use 'base' as b;
+@use 'media' as m;
+
+.content_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh 0;
+    background-color: b.$blackmain;
+
+    .content_container {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@include m.Phone{
+    .content_section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+        background-color: b.$blackmain;
+    
+        .content_container {
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+}
+

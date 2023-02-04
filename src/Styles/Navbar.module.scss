@@ -1,0 +1,49 @@
+@use 'base' as b;
+@use 'media' as m;
+
+.main_nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: b.$blackmain;
+    padding: 3vh 5vw;
+    margin: 0;
+
+    .navlogo {
+        width: 20vw;
+    }
+
+    .navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .navlink {
+            margin: 0 20px;
+        }
+    }
+}
+
+.mobile_nav {
+    display: none;
+}
+
+@include m.Phone{
+    .main_nav {
+        display: none;
+    }
+
+    .mobile_nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background-color: b.$blackmain;
+        padding: 3vh 5vw;
+        margin: 0;
+
+        .navlogo {
+            width: 30vw;
+        }
+    }
+}

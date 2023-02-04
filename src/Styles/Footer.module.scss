@@ -1,0 +1,14 @@
+@use 'base' as b;
+
+.footer_section {
+    display: flex;
+    background-color: b.$blackmain;
+    padding: 5vh 0;
+    justify-content: center;
+    align-items: center;
+
+    .footer_text {
+        color: b.$redmain;
+        letter-spacing: 1vw;
+    }
+};
